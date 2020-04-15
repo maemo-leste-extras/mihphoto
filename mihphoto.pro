@@ -18,6 +18,7 @@ icon.path = /usr/share/icons/hicolor/64x64/apps
 VERSION = 1.0.13
 #VERSION="\\"1.0.13\\""
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+DEFINES += Q_WS_MAEMO_5
 
 QT       += core gui svg widgets
 
