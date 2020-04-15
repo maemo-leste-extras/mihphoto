@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Icon=mihphoto64
+Exec=mihphoto --no-multitouch
+Name=mihphoto
+# translation example:
+# your app name in German locale (de)
+Name[de]=mihphoto

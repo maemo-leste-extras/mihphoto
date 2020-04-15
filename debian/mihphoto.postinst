@@ -1,0 +1,2 @@
+#!/bin/sh -e
+gtk-update-icon-cache /usr/share/icons/hicolor
