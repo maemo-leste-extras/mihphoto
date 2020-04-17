@@ -1,4 +1,4 @@
-mihphoto (1.0.13-1) unstable; urgency=low
+mihphoto (1.0.14) unstable; urgency=low
   * debian changes for leste extras
   * added qt5-style-plugins
   * set maemo5 style in desktop
