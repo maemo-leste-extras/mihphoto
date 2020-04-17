@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Icon=mihphoto64
-Exec=mihphoto --no-multitouch
+Exec=mihphoto -style maemo5
 Name=mihphoto
 # translation example:
 # your app name in German locale (de)

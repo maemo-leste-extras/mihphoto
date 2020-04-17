@@ -9,7 +9,7 @@ MihPhoto works best on multitouch devices. On devices (or operating systems) tha
 MihPhoto was orignially developed by Mihai Paslariu in 2010-2012. This software is licensed under the General Public License (GLP). See the COPYING file in the main application folder for the full text of the lincense.
 
 ## Sources
-This source is optimized for Maemo-Leste and N900 device. N900 is not multitouch capable, if you would like activate multitouch you need to edit the desktop file and remove --no-multitouch.
+This source is optimized for Maemo-Leste and N900 device. N900 is not multitouch capable, if you would like activate multitouch you need to edit the desktop file and add --multitouch.
 The original sources and hompage:
 * [Homepage](https://sites.google.com/site/mihplaesu/projects/mihphoto)
 * [QtApps/Linux-Apps](https://www.linux-apps.com/p/1131089/)

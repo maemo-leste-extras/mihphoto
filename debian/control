@@ -8,7 +8,7 @@ Homepage: https://sites.google.com/site/mihplaesu/projects/mihphoto
 
 Package: mihphoto
 Architecture: any
-Depends: libqt5gui5, libqt5widgets5, libqt5core5a, ${misc:Depends}, ${shlibs:Depends}
+Depends: libqt5gui5, libqt5widgets5, libqt5core5a, qt5-style-plugins, ${misc:Depends}, ${shlibs:Depends}
 Description: MihPhoto is meant to be a simple touchscreen-friendly image viewer.
   There a lot of very good image viewers, including many opensource ones, but most of them are very difficult to handle on a touchscreen. 
   This application was designed with touchscreens in mind so it is most useful if you have a touchscreen. 

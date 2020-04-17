@@ -1,3 +1,10 @@
+mihphoto (1.0.13-1) unstable; urgency=low
+  * debian changes for leste extras
+  * added qt5-style-plugins
+  * set maemo5 style in desktop
+
+ -- Christian Weniger <less_to_space@web.de>  Fri, 17 Apr 2020 19:02:45 +0100
+
 mihphoto (1.0.13) unstable; urgency=low
   * first maemo leste release
 

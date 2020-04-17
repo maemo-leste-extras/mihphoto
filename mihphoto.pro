@@ -1,6 +1,19 @@
-# Add files and directories to ship with the application 
-# by adapting the examples below.
-# file1.source = myfile
+# MihPhoto project file for Qt5
+
+message($$QMAKESPEC)
+
+linux-g++ {
+    message(build for **amd64**)
+}
+
+linux-arm-gnueabi-g++ {
+    message(build for **armhf**)
+}
+
+linux-aarch64-gnu-g++ {
+    message(build for **arm64**)
+}
+
 TARGET = mihphoto
 installPrefix = /usr
 target.path = $${installPrefix}/bin
