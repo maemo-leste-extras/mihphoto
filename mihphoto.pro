@@ -24,12 +24,12 @@ icons.files = icons/*
 icons.path = $${DEPLOYMENT_PATH}/icons
 desktopfile.files = $${TARGET}.desktop
 desktopfile.path = /usr/share/applications/hildon
-icon.files = $${TARGET}64.png
-icon.path = /usr/share/icons/hicolor/64x64/apps
+icon.files = $$files(symbol/hicolor/*)
+icon.path = $${installPrefix}/share/icons/hicolor
 
-#DEFINES += VERSION="1.0.13"
-VERSION = 1.0.13
-#VERSION="\\"1.0.13\\""
+#DEFINES += VERSION="1.0.14"
+VERSION = 1.0.14
+#VERSION="\\"1.0.14\\""
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += Q_WS_MAEMO_5
 
