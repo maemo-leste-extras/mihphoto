@@ -6,7 +6,6 @@ Build-Depends: debhelper (>= 10),
     qtbase5-dev,
     qtbase5-dev-tools,
     qt5-qmake,
-    qt5-default,
     libqt5svg5-dev,
     cdbs
 Standards-Version: 3.9.6
