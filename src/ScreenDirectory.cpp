@@ -170,12 +170,12 @@ void ScreenDirectory::onPaint( QPainter & painter )
 
 		QFontMetrics fm( painter.font() );
 		painter.setPen( g_config.text_color );
-		w = fm.width(s1);
+		w = fm.horizontalAdvance(s1);
 		h = fm.height();
 		x = ( width() - w ) / 2;
 		y = height()/2 - h - 2;
 		painter.drawText( x,y, s1 );
-		w = fm.width(s2);
+		w = fm.horizontalAdvance(s2);
 		x = ( width() - w ) / 2;
 		y = height()/2 + 2;
 		painter.drawText( x,y, s2 );
@@ -744,7 +744,7 @@ void ScreenDirectory::onWheel( QWheelEvent * event )
 	// change thumbnail size if ctrl is pressed
 	if ( event->modifiers() & Qt::ControlModifier )
 	{
-		if ( event->delta() > 0 )
+		if ( event->angleDelta().y() > 0 )
 			_zoomIn();
 		else
 			_zoomOut();
@@ -753,7 +753,7 @@ void ScreenDirectory::onWheel( QWheelEvent * event )
 
 	// by default: scroll through thumbnails
 	int delta = height() / 6;
-	if ( event->delta() > 0 )
+	if ( event->angleDelta().y() > 0 )
 		_scroll_pos_dest -= delta;
 	else
 		_scroll_pos_dest += delta;

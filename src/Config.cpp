@@ -285,7 +285,7 @@ void Config::computeUiSize( int screen_dpi )
 QString Config::_fromColor( QColor &c )
 {
 	QString s;
-	s.sprintf("%d %d %d", c.red(), c.green(), c.blue() );
+	s.asprintf("%d %d %d", c.red(), c.green(), c.blue() );
 	return s;
 }
 

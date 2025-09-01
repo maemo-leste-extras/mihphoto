@@ -456,7 +456,7 @@ void ScreenSettings::onKeyPress( QKeyEvent * event )
 void ScreenSettings::onWheel( QWheelEvent * event )
 {
 	int delta = height() / 6;
-	if ( event->delta() > 0 )
+	if ( event->angleDelta().y() > 0 )
 		_scroll_pos_dest -= delta;
 	else
 		_scroll_pos_dest += delta;

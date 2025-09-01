@@ -380,12 +380,12 @@ void ScreenViewer::onPaint( QPainter & painter )
 		int w,h,x,y;
 		QFontMetrics fm( painter.font() );
 		painter.setPen( g_config.text_color );
-		w = fm.width(s1);
+		w = fm.horizontalAdvance(s1);
 		h = fm.height();
 		x = ( width() - w ) / 2 + _drag_offset;
 		y = height()/2 - h - 2;
 		painter.drawText( x,y, s1 );
-		w = fm.width(s2);
+		w = fm.horizontalAdvance(s2);
 		x = ( width() - w ) / 2 + _drag_offset;
 		y = height()/2 + 2;
 		painter.drawText( x,y, s2 );
@@ -425,7 +425,7 @@ void ScreenViewer::onPaint( QPainter & painter )
 		QString s;
 		if ( m_files.count() != 0 )
 		{
-			s.sprintf("[%d/%d] ", (m_current_index+1), m_files.count() );
+			s.asprintf("[%d/%d] ", (m_current_index+1), m_files.count() );
 			s += m_files[m_current_index];
 		}
 
@@ -439,7 +439,7 @@ void ScreenViewer::onPaint( QPainter & painter )
 		int space_y = 5;
 
 		QFontMetrics fm( font );
-		int w = fm.width(s);
+		int w = fm.horizontalAdvance(s);
 		int h = fm.height();
 		int x = space_x;
 		if ( horz_p == 1 ) x = ( width() - w ) / 2;
@@ -1044,12 +1044,12 @@ void ScreenViewer::onWheel( QWheelEvent * event )
 {
 	if ( event->modifiers() & ( Qt::ShiftModifier | Qt::ControlModifier ) )
 	{
-		if ( event->delta() > 0 )
+		if ( event->angleDelta().y() > 0 )
 			zoomIn( 0.90 );
 		else
 			zoomOut( 0.90 );
 	} else {
-		if ( event->delta() > 0 )
+		if ( event->angleDelta().y() > 0 )
 			back();
 		else
 			forward();
