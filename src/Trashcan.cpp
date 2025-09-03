@@ -123,8 +123,7 @@ QString getPartitionTrashFolder( QString directory_of_deleted_file )
 
 	// otherwise, try the partition trash folder with the user id (".Trash-<uid>")
 	uid_t uid = getuid();
-	QString uid_str;
-	uid_str.asprintf("%u", (unsigned int)uid);
+	QString uid_str = QString("%1").arg((unsigned int)uid);
 	trash_dir = root + "/.Trash-" + uid_str;
 	QDir user_trash(trash_dir);
 	if ( !user_trash.exists() && !user_trash.mkpath(".") )
@@ -190,7 +189,7 @@ bool sendToTrashFreeDesktop( QString dirname, QString filename )
 		int i;
 		for ( i = 0; i < max_tries; i++ )
 		{
-			number.asprintf("%d", i);
+			number=QString("%1").arg(i);
 			new_name = filename + " " + number;
 			QFileInfo nfi( files_dir + new_name );
 			if ( !nfi.exists() )
