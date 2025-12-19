@@ -1,3 +1,8 @@
+mihphoto (1.0.15) unstable; urgency=low
+  * debian/rules: use standard dh install
+
+ -- Sander <code@kroket.io>  Fri, 19 Dec 2025 09:02:45 +0100
+
 mihphoto (1.0.14) unstable; urgency=low
   * debian changes for leste extras
   * added qt5-style-plugins
