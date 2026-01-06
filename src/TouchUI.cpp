@@ -22,6 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Config.h"
 #include "ImageLoadThread.h"
 #include <stdio.h>
+#include <QFile>
+
+#include "MainWindow.h"
 
 TouchUI::TouchUI()
 {
@@ -128,7 +131,13 @@ bool TouchUI::highlightItem( int x, int y )
 
 void TouchUI::addAction( TouchUIAction a, QString icon_name )
 {
-	int spacing = TouchUI::scaleUI(20);
+	auto default_spacing = 20;
+	const auto window_width = MAINWINDOW->width();
+	if (window_width <= 600) {
+		default_spacing = 18;
+	}
+
+	int spacing = TouchUI::scaleUI(default_spacing);
 	int left_space = spacing;
 	if ( _items.count() > 0 )
 		left_space += _items.back()->x2;

@@ -23,8 +23,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QColor>
 #include <QString>
+#include <QMainWindow>
 
 #define CONFIG_FILE		".mihphoto.config"
+
+class MainWindow;
+extern MainWindow *MAINWINDOW;
 
 struct Config
 {

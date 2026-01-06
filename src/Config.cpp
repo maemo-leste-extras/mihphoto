@@ -27,6 +27,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdio.h>
 #include <QtCore>
 
+#include "MainWindow.h"
+
+MainWindow *MAINWINDOW = nullptr;
+
 /*
 #ifdef Q_OS_SYMBIAN
 #include <QSystemDeviceInfo>
@@ -278,8 +282,8 @@ void Config::computeUiSize( int screen_dpi )
 	// screen_dpi => ui_size
 	// (only scale to bigger)
 	g_config.ui_size = screen_dpi * 48 / 135;
-	if ( g_config.ui_size < 48 )
-		g_config.ui_size = 48;
+	if ( g_config.ui_size < 34 )
+		g_config.ui_size = 34;
 }
 
 QString Config::_fromColor( QColor &c )

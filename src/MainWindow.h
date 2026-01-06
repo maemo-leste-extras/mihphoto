@@ -57,6 +57,7 @@ protected:
 	void closeEvent( QCloseEvent * event );
 	void keyPressEvent( QKeyEvent * event );
 	void wheelEvent( QWheelEvent * event );
+	void resizeEvent(QResizeEvent *event) override;
 
 private slots:
 
@@ -69,6 +70,10 @@ private slots:
 	void hideCursor();
 	void showCursor();
 	void loadDroppedFile( QString name );
+
+signals:
+
+	void windowResized(QSize new_size, QSize old_size);
 
 private:
 

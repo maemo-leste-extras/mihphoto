@@ -25,6 +25,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ScreenViewer.h"
 #include "Trashcan.h"
 
+#include "MainWindow.h"
+
 ScreenViewer::ScreenViewer()
 	: ScreenBase()
 {
@@ -42,6 +44,9 @@ ScreenViewer::ScreenViewer()
 	_load_thread.start();
 	_show_ui = false;
 	_show_ui_by_tap = false;
+
+	// redraw menu on resolution/dimensions change
+	connect(MAINWINDOW, &MainWindow::windowResized, [=]{ _loadUI(); });
 }
 
 ScreenViewer::~ScreenViewer()
@@ -1441,7 +1446,7 @@ void ScreenViewer::_loadUI( void )
 	_extra_buttons = g_config.show_extra_buttons;
 	_ui.clean();
 
-	bool draw_separator = true;
+	bool draw_separator = MAINWINDOW->width() >= 600;
 #ifdef Q_OS_SYMBIAN
 	draw_separator = false;
 #endif

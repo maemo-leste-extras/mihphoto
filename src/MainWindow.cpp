@@ -31,6 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 MainWindow::MainWindow( QString startfile, bool fullscreen )
 {
+	MAINWINDOW = this;
 	setWindowTitle(tr("MihPhoto"));
 	setWindowIcon(QIcon(g_config.install_dir+"/icon128.png"));
 	resize(640, 480);
@@ -323,4 +324,13 @@ void MainWindow::_loadFiles( QString name )
 void MainWindow::_loadFiles( QString dir, QString current_file )
 {
 	_image_area->setFiles( dir, current_file );
+}
+
+void MainWindow::resizeEvent(QResizeEvent *event)
+{
+	const QSize newSize = event->size();
+	const QSize oldSize = event->oldSize();
+	emit windowResized(newSize, oldSize);
+
+	QMainWindow::resizeEvent(event);
 }

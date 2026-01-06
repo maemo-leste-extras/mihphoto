@@ -1,3 +1,8 @@
+mihphoto (1.0.16) unstable; urgency=low
+  * An attempt at making the toolbar smaller in portrait on devices with a small screen
+
+ -- Sander <code@kroket.io>  Fri, 06 Jan 2026 21:35:45 +0300
+
 mihphoto (1.0.15) unstable; urgency=low
   * debian/rules: use standard dh install
 
