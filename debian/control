@@ -17,9 +17,9 @@ Vcs-Browser: https://github.com/maemo-leste-extras/mihphoto/
 Package: mihphoto
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
-    libqt5gui5,
-    libqt5widgets5,
-    libqt5core5a,
+    libqt5gui5t64,
+    libqt5widgets5t64,
+    libqt5core5t64,
     qt5-style-plugins
 Description: MihPhoto is meant to be a simple touchscreen-friendly image viewer.
   There a lot of very good image viewers, including many opensource ones, but most of them are very difficult to handle on a touchscreen. 
